@@ -1,0 +1,21 @@
+<div style="text-align: center;">
+    <h2>{{message}}</h2>
+</div>
+<div class="container form formStyle">
+    <form (ngSubmit)="processForm()"  >
+        <div class="form-group">
+            <label  class="control-label">Numéro : </label>
+            <input type="number" name="num" ngModel class="form-control" [(ngModel)]="place.numero"/>
+        </div>
+        <div class="form-group">
+            <label  class="control-label">longitude : </label>
+            <input type="text" name="longitude" ngModel class="form-control" [(ngModel)]="place.longitude"/>
+        </div>
+        <div class="form-group">
+            <label  class="control-label">latitude : </label>
+            <input type="text" name="latitude" ngModel class="form-control" [(ngModel)]="place.latidude"/>
+        </div>
+       
+        <button class="btn btn-warning" type="submit" value="Register">Enregistrer</button>
+    </form>
+</div>

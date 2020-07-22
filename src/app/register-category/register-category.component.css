@@ -1,0 +1,13 @@
+div.form
+{
+    display: block;
+   
+    width: 40%;
+}
+form {
+    margin: 0 auto;
+    width: 80%;
+}
+.formStyle{
+    background-color: #E5EAEF;
+}

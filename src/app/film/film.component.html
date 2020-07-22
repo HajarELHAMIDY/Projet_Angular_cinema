@@ -1,0 +1,58 @@
+<div class="container tableau">
+    <table class="table  tbaleCss"> 
+                 
+        <thead> 
+                <tr> 
+             
+                <td class="title">Image</td> 
+                <td class="title">Titre</td> 
+                <td class="title">Realisateur</td> 
+                <td class="title">Date Sortie</td> 
+                <td class="title">Durée</td> 
+                <td class="title">Catégorie</td> 
+              
+           
+                <td class="glyphicon glyphicon-pencil " colspan="3" > <span (click)="newFilm()" class="clicable title" >Ajouter</span></td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="films"> 
+                <tr  *ngFor="let v of films._embedded.films"> 
+                
+                <td >  <img width="150" src="{{cinemaService.host+'/imageFilm/'+v.id}}">
+                </td>  
+                <td >{{v.titre}}</td> 
+                <td >{{v.realisateur}}</td>  
+                <td >{{v.dateSortie}}</td>  
+                <td >{{v.duree}}</td>  
+                <td >{{v.categorie}}</td>  
+     
+               
+               
+                <td>
+                        <a   (click)="deleteFilm(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updateFilm(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+                <td >
+                        <a  (click)="OnEditPhoto(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-download"></span>
+                                </a>
+                                <p *ngIf="editPhoto==true && currentfilm ==v">
+                                        <input type="file" (change)="onSelectedFile($event)"/>
+                                        <button class="btn btn-success" (click)="uploadPhoto()">Télécharger</button>
+                               
+                                    </p>    
+                </td>
+          
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

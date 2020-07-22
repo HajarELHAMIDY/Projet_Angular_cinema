@@ -1,0 +1,50 @@
+<div class="container ">
+    <table class="table  tbaleCss"> 
+                 
+        <thead> 
+                <tr> 
+             
+                <td class="title">Cinema </td> 
+                <td class="title">Name</td> 
+                <td class="title">Longitude</td> 
+                <td class="title">Latitude </td> 
+                <td class="title">Nombre salle</td> 
+               
+              
+           
+                <td class="glyphicon glyphicon-pencil " colspan="3" > <span (click)="newCinema()" class="clicable title" >Ajouter</span></td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="cinemas"> 
+                <tr  *ngFor="let v of cinemas._embedded.cinemas"> 
+                
+                <td >  <img width="100" src="/assets/cinema2.png">
+                </td>  
+                <td >{{v.name}}</td> 
+                <td >{{v.longitude}}</td>  
+         
+                <td >{{v.labtitude}}</td>  
+                <td >{{v.nombreSalles}}</td>  
+              
+     
+               
+               
+                <td>
+                        <a   (click)="deleteCinema(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updateCinema(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+              
+          
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

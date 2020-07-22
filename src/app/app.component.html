@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse bg-primary navbar-expand-sm">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="color:yellow;" routerLink="/cinemas">Projet Cinema</a>
+
+    </div>
+    <ul class="nav navbar-nav pull-right" >
+      
+     
+      <li>
+        <a class="btn" (click)="onLogout()">
+          <span class="glyphicon glyphicon-log-out"></span>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li *ngIf="isAdmin()" ><a routerLink="/villes">Gestion Villes </a></li>
+      <li *ngIf="isAdmin()" ><a routerLink="/categories">Gestion Catégories</a></li>
+      
+      <li *ngIf="isAdmin()" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gestion cinémas
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/manage-cinemas">Cinémas</a></li>
+          <li><a routerLink="/films">Films</a></li>
+          <li><a routerLink="/salles">Salles</a></li>
+          <li><a routerLink="/seances">Séances</a></li>
+          <li><a routerLink="/projections">Projections</a></li>
+          <li><a routerLink="/places">Places</a></li>
+          <li><a routerLink="/tickets">Tickets</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<router-outlet>
+      
+</router-outlet>
+

@@ -1,0 +1,33 @@
+<div style="text-align: center;">
+    <h2>{{message}}</h2>
+</div>
+<div class="container form formStyle">
+    <form (ngSubmit)="processForm()"  >
+        <div class="form-group">
+            <label  class="control-label">Nom : </label>
+            <input type="text" name="name" ngModel class="form-control" [(ngModel)]="cinema.name"/>
+        </div>
+        <div class="form-group">
+            <label  class="control-label">longitude : </label>
+            <input type="text" name="longitude" ngModel class="form-control" [(ngModel)]="cinema.longitude"/>
+        </div>
+        <div class="form-group">
+            <label  class="control-label">latitude : </label>
+            <input type="text" name="latitude" ngModel class="form-control" [(ngModel)]="cinema.labtitude"/>
+        </div>
+        <div class="form-group">
+            <label  class="control-label">Nombre Place : </label>
+            <input type="number" name="nbr" ngModel class="form-control" [(ngModel)]="cinema.nombreSalles"/>
+        </div>
+        <div class="form-group">
+            <label >Ville</label>
+            <select class="form-control" >
+      
+              <option *ngFor="let c of villes._embedded.villes" >{{c.name}}</option>
+             
+            </select>
+          </div>
+       
+        <button class="btn btn-warning" type="submit" value="Register">Enregistrer</button>
+    </form>
+</div>

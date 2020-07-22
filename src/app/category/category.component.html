@@ -1,0 +1,36 @@
+<div class="container tableau">
+    <table class="table  tbaleCss"> 
+                 
+        <thead> 
+                <tr> 
+             
+                
+                        <td >catégorie</td> 
+                <td class="title">Nom</td> 
+           
+                <td class="glyphicon glyphicon-pencil"  > <span (click)="newCategory()" class="clicable title" >Ajouter</span></td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="categories"> 
+                <tr  *ngFor="let v of categories._embedded.categories"> 
+                
+                <td >  <img width="50" src="/assets/cat.jpg"></td>
+                <td >{{v.name}}</td> 
+               
+                <td>
+                        <a   (click)="deleteCategory(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updateCategory(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

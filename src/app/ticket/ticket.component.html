@@ -1,0 +1,36 @@
+<div class="container tableau">
+    <table class="table tbaleCss" > 
+                 
+        <thead> 
+                <tr> 
+                <td class="title">Ticket </td>
+                <td class="title">Nom Client</td> 
+                <td class="title">Prix </td> 
+                <td class="title">Reserve </td> 
+             
+                <td class="glyphicon glyphicon-pencil"  > <span (click)="newTicket()" class="clicable title" >Ajouter</span> </td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="tickets"> 
+                <tr  *ngFor="let v of tickets._embedded.tickets"> 
+                <td> <img width="70" height="70" src="/assets/ticket.png"></td>
+                
+                <td>{{v.nomClient}}</td> 
+                <td>{{v.prix}}</td> 
+                <td>{{v.reserve}}</td> <td>
+                        <a   (click)="deleteTicket(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updateTicket(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

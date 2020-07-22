@@ -1,0 +1,42 @@
+<div style="text-align: center;">
+    <h2>{{message}}</h2>
+</div>
+<div class="container form formStyle">
+    <form (ngSubmit)="processForm()"  >
+        <div class="form-group">
+            <label  class="control-label">Titre : </label>
+            <input type="text" name="titre" ngModel class="form-control" [(ngModel)]="film.titre"/>
+        </div>
+
+        <div class="form-group">
+            <label  class="control-label">Description : </label>
+            <textarea name="description" ngModel class="form-control" [(ngModel)]="film.description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label  class="control-label">Réalisateur: </label>
+            <input type="text" name="realisateur" ngModel class="form-control" [(ngModel)]="film.realisateur"/>
+        </div>
+
+        <div class="form-group">
+            <label  class="control-label">Durée: </label>
+            <input type="number" name="duree" ngModel class="form-control" [(ngModel)]="film.duree"/>
+        </div>
+        
+        <div class="form-group">
+            <label  class="control-label">Date: </label>
+            <input type="date" name="duree" ngModel class="form-control" [(ngModel)]="film.dateSortie"/>
+        </div>
+        <div class="form-group">
+            <label >Catégorie</label>
+            <select class="form-control" >
+      
+              <option *ngFor="let c of categories._embedded.categories" >{{c.name}}</option>
+             
+            </select>
+          </div>
+        
+       
+        <button class="btn btn-warning" type="submit" value="Register">Enregistrer</button>
+    </form>
+</div>

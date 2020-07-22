@@ -1,0 +1,35 @@
+<div class="container tableau">
+    <table class="table tbaleCss" > 
+                 
+        <thead> 
+                <tr> 
+             
+                <td class="title">Salle</td> 
+                <td class="title">Nom</td> 
+                <td class="title">Nombre Place</td> 
+             
+                <td class="glyphicon glyphicon-pencil"  > <span (click)="newSalle()" class="clicable title" >Ajouter</span> </td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="salles"> 
+                <tr  *ngFor="let v of salles._embedded.salles"> 
+                <td><img width="70" height="70" src="/assets/salle.jpg"></td>
+                <td>{{v.name}}</td> 
+                <td>{{v.nombrePlace}}</td> 
+                <td>
+                        <a   (click)="deleteSalle(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updateSalle(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

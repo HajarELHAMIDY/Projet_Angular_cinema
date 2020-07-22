@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+    <h2>{{message}}</h2>
+</div>
+<div class="container form formStyle">
+    <form (ngSubmit)="processForm()"  >
+        <div class="form-group">
+            <label  class="control-label">Nom : </label>
+            <input type="text" name="name" ngModel class="form-control" [(ngModel)]="salle.name"/>
+        </div>
+        <div class="form-group">
+            <label  class="control-label">Nombre Place : </label>
+            <input type="number" name="places" ngModel class="form-control" [(ngModel)]="salle.nombrePlace"/>
+        </div>
+     
+       
+        <button class="btn btn-warning" type="submit" value="Register">Enregistrer</button>
+    </form>
+</div>

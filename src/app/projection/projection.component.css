@@ -1,0 +1,21 @@
+div.tabeau
+{
+    display: block;
+    text-align: center;
+    width: 70%;
+}
+.tableau {
+    margin: 0 auto;
+    width: 30%;
+}
+.tbaleCss{
+    background-color: #ffffff;
+}
+.title {
+    font-size: 18px;
+    color: #8A6000;
+}
+.clicable{
+    cursor: pointer;
+   
+  }

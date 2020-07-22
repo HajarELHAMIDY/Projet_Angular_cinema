@@ -1,0 +1,36 @@
+<div class="container tableau">
+    <table class="table tbaleCss" > 
+                 
+        <thead> 
+                <tr> 
+                <td class="title">Place </td>
+                <td class="title">Numéro</td> 
+                <td class="title">longitude </td> 
+                <td class="title">latitude </td> 
+             
+                <td class="glyphicon glyphicon-pencil"  > <span (click)="newPlace()" class="clicable title" >Ajouter</span> </td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="places"> 
+                <tr  *ngFor="let v of places._embedded.places"> 
+                <td> <img width="70" height="70" src="/assets/place.png"></td>
+                
+                <td>{{v.numero}}</td> 
+                <td>{{v.longitude}}</td> 
+                <td>{{v.latitude}}</td> <td>
+                        <a   (click)="deletePlace(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updatePlace(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

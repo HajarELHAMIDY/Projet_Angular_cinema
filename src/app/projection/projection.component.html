@@ -1,0 +1,45 @@
+<div class="container ">
+    <table class="table  tbaleCss"> 
+                 
+        <thead> 
+                <tr> 
+             
+                <td class="title">Projection </td> 
+                <td class="title">Date projection</td> 
+                <td class="title">Prix</td> 
+              
+              
+           
+                <td class="glyphicon glyphicon-pencil " colspan="3" > <span (click)="newProjection()" class="clicable title" >Ajouter</span></td>
+                </tr> 
+        </thead> 
+        <tbody *ngIf="projections"> 
+                <tr  *ngFor="let v of projections._embedded.projections"> 
+                
+                <td >  <img width="100" src="/assets/projection2.png">
+                </td>  
+                <td >{{v.dateProjection}}</td> 
+                <td >{{v.prix}}</td>  
+         
+     
+               
+               
+                <td>
+                        <a   (click)="deleteProjection(v)"   class="btn btn-danger btn-sm">
+                                <span  class="glyphicon glyphicon-remove"></span>
+                                </a>
+                </td>
+                
+                <td>
+                
+                        <a  (click)="updateProjection(v)" class="btn btn-success btn-sm">
+                                <span class="glyphicon glyphicon-edit"></span>
+                                </a>
+                </td>
+              
+          
+                </tr> 
+                
+       </tbody> 
+</table>
+</div>

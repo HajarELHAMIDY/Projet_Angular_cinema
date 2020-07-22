@@ -1,0 +1,30 @@
+.clicable{
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+.ticket{
+  margin: 5px;
+  width: 40px;
+}
+.cinemaStyle{
+  color:#000000;
+}
+li:hover, li:active, li:focus, li>a:hover  {
+  background-color: #FFFC87;
+  color: #000000;
+}
+
+
+.myOwnBg {
+  background-color: #BFBEB8;
+  color: #ffffff;
+}
+.titre{
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  text-align: center;
+  
+
+}

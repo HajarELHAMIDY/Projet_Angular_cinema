@@ -1,0 +1,10 @@
+div.form
+{
+    display: block;
+    text-align: center;
+    width: 40%;
+}
+form {
+    margin: 0 auto;
+    width: 75%;
+}
